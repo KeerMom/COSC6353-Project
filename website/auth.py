@@ -19,7 +19,8 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
-                return redirect(url_for('views.home'))
+                # return redirect(url_for('views.home'))
+                return redirect(url_for('views.fuel_quote_form'))
             else:
                 flash('Incorrect password, try again.', category='error')
         else:
@@ -61,41 +62,38 @@ def sign_up():
             db.session.commit()
             login_user(new_user, remember=True)
             flash('Account created!', category='success')
-
+            print("current_user id is :", current_user.id)
             return redirect(url_for('views.create_profile'))
 
     return render_template("sign_up.html", user=current_user)
 
-@auth.route('/create-profile', methods=['GET', 'POST'])
-def create_profile():
-    if request.method == 'POST':
-        full_name = request.form.get('fullname')
-        address1 = request.form.get('address1')
-        address2 = request.form.get('address2')
-        city = request.form.get('city')
-        state = request.form.get('state')
-        zipcode = request.form('zipcode')
-
-        # user = User.query.filter_by(email=email).first()
-        # if user:
-        #     flash('Email already exists.', category='error')
-        if len(full_name) < 1 or len(full_name) > 50:
-            flash('Full name must be greater than 1 and less than 50 characters.', category='error')
-        elif len(address1) < 2 or len(address1) > 100:
-            flash('Address must be greater than 2 and less than 100 characters.', category='error')
-        elif len(city) < 2 or len(city) > 100:
-            flash('City must be greater than 2 and less than 100 characters.', category='error')
-        elif len(state) != 2:
-            flash('Reselect state.', category='error')
-        elif len(zipcode) < 5 or len(zipcode) > 9:
-            flash('Zipcode must be greater than 5 and no more than 9 characters.', category='error')
-        else:
-            # new_user_profile = Profile(full_name=full_name, address1=address1, address2=address2, city=city, state=state, zipcode=zipcode)
-            # db.session.add(new_user_profile)
-            # db.session.commit()
-            # login_user(new_user, remember=True)
-            flash('Account created!', category='success')
-            # return redirect(url_for('views.home'))
-            return redirect(url_for('views.fuel_quote_form'))
-
-    return render_template("profile.html", user=current_user)
+# @auth.route('/create-profile', methods=['GET', 'POST'])
+# def create_profile():
+#     if request.method == 'POST':
+#         full_name = request.form.get('fullname')
+#         address1 = request.form.get('address1')
+#         address2 = request.form.get('address2')
+#         city = request.form.get('city')
+#         state = request.form.get('state')
+#         zipcode = request.form('zipcode')
+#
+#         if len(full_name) < 1 or len(full_name) > 50:
+#             flash('Full name must be greater than 1 and less than 50 characters.', category='error')
+#         elif len(address1) < 2 or len(address1) > 100:
+#             flash('Address must be greater than 2 and less than 100 characters.', category='error')
+#         elif len(city) < 2 or len(city) > 100:
+#             flash('City must be greater than 2 and less than 100 characters.', category='error')
+#         elif len(state) != 2:
+#             flash('Reselect state.', category='error')
+#         elif len(zipcode) < 5 or len(zipcode) > 9:
+#             flash('Zipcode must be greater than 5 and no more than 9 characters.', category='error')
+#         else:
+#             new_user_profile = Profile(full_name=full_name, address1=address1, address2=address2, city=city, state=state, zipcode=zipcode)
+#             db.session.add(new_user_profile)
+#             db.session.commit()
+#             # login_user(new_user, remember=True)
+#             flash('Account created!', category='success')
+#             # return redirect(url_for('views.home'))
+#             return redirect(url_for('views.fuel_quote_form'))
+#
+#     return render_template("profile.html", user=current_user)

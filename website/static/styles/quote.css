@@ -32,7 +32,6 @@
 
 /*quote result*/
 
-
 .content-table {
   font-family: Lato;
   border-collapse: collapse;
@@ -74,6 +73,24 @@
 .content-table tbody tr.active-row {
   /* font-weight: bold; */
   color: #009879;
+}
+
+.left{
+  padding: 10px 60px;
+  width: 30%;
+  float: left;
+}
+
+.right{
+  /* padding: 10px 60px; */
+  padding-top: 10px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  width: 30%;
+  text-align: left;
+  float: right;
+  font-family: Lato;
+  font-weight: bold;
 }
 
 

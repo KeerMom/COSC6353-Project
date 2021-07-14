@@ -27,7 +27,8 @@
   .signin_box {
       width: 1182px;
       height: 780px;
-      /*background: rgba(145, 115, 115, 0.3);*/
+      /*background-color: rgba(145, 115, 115, 0.3);*/
+      /*background-color: blue;*/
       /*background: #EAECF3;*/
       /*filter:opacity(70%); OPTION 2 */
       border-radius: 25px;

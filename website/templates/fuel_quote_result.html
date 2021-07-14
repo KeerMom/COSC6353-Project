@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block title %}Quote Result{% endblock %} {% block
 content %}
 <form method="POST">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/quote.css') }}">
     <div class="quote_box">
         <div style="font-family: Montserrat; font-size: 25px; font-weight: bolder; text-align: center; padding: 6% 0;">
             FUEL QUOTES RESULT
@@ -17,14 +18,39 @@ content %}
                 Delivery Date:
                 <br>
                 <br>
-            </div>
-
-            <div>
                 Suggested Price/gallon:
                 <br>
                 <br>
                 Total Amount Due:
+
             </div>
+
+            <div class="right">
+                {{gallons_requested}}
+                <br>
+                <br>
+                {{delivery_address}}
+                <br>
+                <br>
+                {{delivery_date}}
+                <br>
+                <br>
+                {{suggest_price}}
+                <br>
+                <br>
+                {{total_price}}
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit Quote</button>
+            </div>
+
+
+<!--            <div>-->
+<!--                Suggested Price/gallon:-->
+<!--                <br>-->
+<!--                <br>-->
+<!--                Total Amount Due:-->
+<!--            </div>-->
         </div>
     </div>
 </form>

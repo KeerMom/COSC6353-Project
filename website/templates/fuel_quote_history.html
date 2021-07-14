@@ -12,24 +12,21 @@ content %}
             <table class="content-table">
                 <thead>
                   <tr style="font-weight: bolder;">
-                    <th>Order No.</th>
-                    <th>Order Date</th>
-                    <th>Delivery Address</th>
                     <th>Delivery Date</th>
+                    <th>Delivery Address</th>
                     <th>Gallons</th>
                     <th>Price</th>
-
+                    <th>Total Due</th>
                   </tr>
                 </thead>
                 <tbody>
                   {% for order in history_list %}
                     <tr>
-                      <td>{{ order[0] }}</td>
-                      <td>{{ order[1] }}</td>
-                      <td>{{ order[2] }}</td>
-                      <td>{{ order[3] }}</td>
-                      <td>{{ order[4] }}</td>
-                      <td>${{ order[5] }}</td>
+                      <td>{{ order.date }}</td>
+                      <td>{{ order.delivery_address }}</td>
+                      <td>{{ order.gallons_requested }}</td>
+                      <td>{{ order.suggest_price }}</td>
+                      <td>{{ order.total_price }}</td>
                     </tr>
                   {% endfor %}
 
