@@ -25,8 +25,8 @@ def create_profile():
         state = request.form.get('state')
         zipcode = request.form.get('zipcode')
 
-        if len(full_name) < 1 or len(full_name) > 50:
-            flash('Full name must be greater than 1 and less than 50 characters.', category='error')
+        if len(full_name) < 2 or len(full_name) > 50:
+            flash('Full name must be greater than 2 and less than 50 characters.', category='error')
         elif len(address1) < 2 or len(address1) > 100:
             flash('Address must be greater than 2 and less than 100 characters.', category='error')
         elif len(city) < 2 or len(city) > 100:
@@ -43,7 +43,7 @@ def create_profile():
             db.session.commit()
 
             flash('Profile created!', category='success')
-
+            #print('test')
             # return redirect(url_for('views.home'))
             return redirect(url_for('views.fuel_quote_form'))
 
@@ -52,7 +52,15 @@ def create_profile():
 
 @views.route('/fuel-quote', methods=['GET', 'POST'])
 def fuel_quote_form():
-    user_profile = Profile.query.get(current_user.id)
+    # print("(fuel_quote) current_user id is :", current_user.id)
+    user = User.query.get(current_user.id)
+    profile_list = user.user_profile
+    cur_profile_id = profile_list[0].id
+    # print(user.user_profile, user.email)
+    # user_address = user.user_profile.address1 + user.user_profile.address2 + user.user_profile.city
+    # user_state = user.user_profile.state
+    # user_profile = Profile.query.get(current_user.id)
+    user_profile = Profile.query.get(cur_profile_id)
     user_address = user_profile.address1 + user_profile.address2 + user_profile.city
     user_state = user_profile.state
     print("the user's address is: ", user_address)
@@ -73,6 +81,7 @@ def fuel_quote_form():
         print("suggest price is: ", quote_result[0], "total price is: ", quote_result[1])
         global quote_info
         quote_info = [request_gallons, request_address, request_date, quote_result[0], quote_result[1]]
+        flash('Suggest price created!', category='success')
         return redirect(url_for('views.fuel_quote_result'))
         # return redirect(url_for('views.fuel_quote_result', quote_info=quote_info1))
         # return redirect(url_for('views.test_fuc',x='15'))
