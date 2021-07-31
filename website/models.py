@@ -1,6 +1,6 @@
 from . import db
 from flask_login import UserMixin
-from sqlalchemy.sql import func
+# from sqlalchemy.sql import func
 
 
 class User(db.Model, UserMixin):
@@ -31,5 +31,4 @@ class Quote(db.Model):
     total_price = db.Column(db.String(100))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-def init_db():
-    db.create_all()
+
