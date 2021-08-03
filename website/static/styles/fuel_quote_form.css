@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/quote_pic_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quote_box{
+    background-color:chocolate;
+    width: 32%;
+    height: 72vh;
+    float: right;
+    margin-right:5.3%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.719);
+    border-radius: 10%;
+    transform: translate(0, 10%);
+    opacity: .9;
+    
+
+
+}
+
+.input_box{
+    padding:1% 15%;
+    margin-bottom: 30px;
+}
+
+.input_box input{
+    border:0;
+    border-bottom: 1px solid rgb(255,255,255);
+    background: transparent;
+    width:100%;
+    font-size: 16px;
+    color: black;
+    padding:4px 0 2.5px 0;
+}
+
+.input_box input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid black;
+}
+
+.quote_box button[type="submit"]{
+    border:none;
+    outline:none;
+    height: 35px;
+    background: pink;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote_box button[class="btn-btn-primary"]{
+
+        text-align: center;
+        margin:auto;
+
+}
