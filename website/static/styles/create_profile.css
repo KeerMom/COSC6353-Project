@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/gas_station_picture.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.column{
+    float: left;
+    width: 100%;
+    padding: 5px;
+}
+
+.signin_box{
+    width: 750px;
+    height: 450px;    
+    background-color: #6a7fca;
+    border-radius: 25px;
+    color: black;
+    opacity: .9;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 10em;
+    vertical-align: middle;
+    position: relative;
+    top: 10px;
+    
+    
+    
+}
+.signin_box input{
+    width: 100%;   
+}
+  
+  
+.signin_box input[type="text"], input[type="password"]
+{
+   border: none;
+   border-bottom: 1px solid black;
+   outline:none;
+   height: 20px;
+   color: black;
+   font-size: 16px;
+   filter: brightness(150%);
+}
+
+.signin_box button[type="submit"]{
+    border:none;
+    outline:none;
+    height: 35px;
+    background: rgb(82, 63, 167);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.signin_box button[class="btn-btn-primary"]{
+
+        text-align: center;
+        margin:auto;
+        position: relative;
+        top: 10px;
+
+}
+
+.signin_box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.signin_box a:hover
+{
+    color: #ffc107;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}

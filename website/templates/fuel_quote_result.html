@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% block title %}Quote Result{% endblock %} {% block
+content %}
+<form method="POST">
+    <link rel="stylesheet" href="../static/styles/fuel_results.css">
+    <div class="saying">
+        BEST QUOTES
+        <br>
+        FOR FUEL
+        <br>
+        HERE
+    </div>
+    
+    
+    <div class="quote_box">
+        <div style="font-family: Montserrat; font-size: 25px; font-weight: bolder; text-align: center; padding: 6% 0;">
+            FUEL QUOTES RESULT
+        </div>
+        
+
+        <div class="checkout_inside">
+            <div class="left">
+                No. of Gallons:
+                <br>
+                <br>
+                Delivery Address:
+                <br>
+                <br>
+                Delivery Date:
+                <br>
+                <br>
+                Suggested Price:
+                <br>
+                <br>
+            </div>
+    
+            <div class="right">
+                {{gallons_requested}}
+                <br>
+                <br>
+                {{delivery_address}}
+                <br>
+                <br>
+                {{delivery_date}}
+                <br>
+                <br>
+                {{suggest_price}}
+                <br>
+                <br>
+            </div>
+    
+            <hr class="checkout_hr">
+    
+           
+    
+            <hr class="checkout_hr">
+    
+            <div class="left" style="font-size: 25px; font-weight: bolder;">
+                Total:
+            </div>
+    
+            <div class="right" style="font-size: 25px; font-weight: bolder;">
+                
+                {{total_price}}
+                
+            
+            </div>
+            
+            <div class="center" style="font-size: 25px; font-weight: bolder;">
+                <button type="submit" class="btn-btn-primary">Submit Quote</button>
+
+            </div>
+        </div>
+
+    </div>
+</form>
+{% endblock %}
+<Script:src></Script:src>

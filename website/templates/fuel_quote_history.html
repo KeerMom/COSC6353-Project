@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}Fuel Quote History{% endblock %} {% block
+content %}
+
+<div class = "history_box">
+  <form method="POST">
+    <link rel="stylesheet" type="text/css" href="../static/styles/quote_history.css">
+    <h3 style="font-family: Montserrat; font-size: 25px; font-weight: bolder; text-align: left;color:White">Fuel Quote History</h3>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/quote.css') }}">
+<!--   <div class="history_box">-->
+<!--        <div class="history">-->
+<!--&lt;!&ndash;            <div class="history_title">&ndash;&gt;-->
+<!--&lt;!&ndash;                FUEL QUOTE HISTORY&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <hr >-->
+            <table class="content-table">
+                <div class="index">
+                  <tr style="font-weight: bolder;">
+                    <th>Delivery Date</th>
+                    <th>Delivery Address</th>
+                    <th>Gallons</th>
+                    <th>Price</th>
+                    <th>Total Due</th>
+                  </tr>
+                </div>
+                <tbody>
+                  {% for order in history_list %}
+                    <tr>
+                      <td>{{ order.date }}</td>
+                      <td>{{ order.delivery_address }}</td>
+                      <td>{{ order.gallons_requested }}</td>
+                      <td>{{ order.suggest_price }}</td>
+                      <td>{{ order.total_price }}</td>
+                    </tr>
+                  {% endfor %}
+
+
+                </tbody>
+              </table>
+<!--        </div>-->
+<!--    </div>-->
+
+  </form>
+</div>
+{% endblock %}
