@@ -1,0 +1,96 @@
+/* CSS FOR QUOTES/ HISTORY PAGE */
+
+/* FORM FOR QUOTES */
+.input_box{
+  padding: 1% 1% ;
+  margin-bottom: 30px;
+}
+
+.input_box input {
+  border: 0;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background: transparent;
+  width: 50%;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 5px 0 5px 0;
+  padding-top: 1%;
+
+}
+
+.input_box input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000000;
+}
+
+.input_label{
+  font-family: Montserrat;
+  font-size: 16px;
+  color: black;
+}
+
+/*quote result*/
+
+.content-table {
+  font-family: Lato;
+  border-collapse: collapse;
+  margin: 5px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  /* font-weight: bold; */
+  margin-left: auto;
+  margin-right: auto;
+  float: center;
+}
+
+.content-table thead tr {
+  /* background-color: #009879; */
+  color: #000000;
+  text-align: center;
+  font-weight: 100;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 32px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #ffffff70;
+}
+
+.content-table tbody tr {
+  background-color: #f3f3f377;
+}
+
+/* .content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+} */
+
+.content-table tbody tr.active-row {
+  /* font-weight: bold; */
+  color: #009879;
+}
+
+.left{
+  padding: 10px 60px;
+  width: 30%;
+  float: left;
+}
+
+.right{
+  /* padding: 10px 60px; */
+  padding-top: 10px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  width: 30%;
+  text-align: left;
+  float: right;
+  font-family: Lato;
+  font-weight: bold;
+}
+
+
