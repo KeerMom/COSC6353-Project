@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/landscape_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Info_box{
+    background-color: #18778cce;
+    width: 32%;
+    height: 60vh;
+    float: right;
+    margin-right: 5.3%;
+    transform: translate(0, -5%);
+    border-radius: 3%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.719);
+    position: relative;
+    top: 60px;
+
+  }
