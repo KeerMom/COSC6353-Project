@@ -158,3 +158,8 @@ def get_price(state, request_frequent, request_gallons):
 @views.route('/Aboutus', methods=['GET', 'POST'])
 def Aboutus():
     return render_template("Aboutus.html", user=current_user)
+
+
+@views.route('/Assignments', methods=['GET', 'POST'])
+def Assignments():
+    return render_template("Assignments.html", user=current_user)
