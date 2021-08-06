@@ -1,13 +1,23 @@
 {% extends "base.html" %} {% block title %}Quote Result{% endblock %} {% block
 content %}
 <form method="POST">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/quote.css') }}">
+    <link rel="stylesheet" href="../static/styles/fuel_results.css">
+    <div class="saying">
+        BEST QUOTES
+        <br>
+        FOR FUEL
+        <br>
+        HERE
+    </div>
+    
+    
     <div class="quote_box">
         <div style="font-family: Montserrat; font-size: 25px; font-weight: bolder; text-align: center; padding: 6% 0;">
             FUEL QUOTES RESULT
         </div>
+        
 
-        <div>
+        <div class="checkout_inside">
             <div class="left">
                 No. of Gallons:
                 <br>
@@ -18,13 +28,11 @@ content %}
                 Delivery Date:
                 <br>
                 <br>
-                Suggested Price/gallon:
+                Suggested Price:
                 <br>
                 <br>
-                Total Amount Due:
-
             </div>
-
+    
             <div class="right">
                 {{gallons_requested}}
                 <br>
@@ -38,20 +46,32 @@ content %}
                 {{suggest_price}}
                 <br>
                 <br>
-                {{total_price}}
-                <br>
-                <br>
-                <button type="submit" class="btn btn-primary">Submit Quote</button>
             </div>
+    
+            <hr class="checkout_hr">
+    
+           
+    
+            <hr class="checkout_hr">
+    
+            <div class="left" style="font-size: 25px; font-weight: bolder;">
+                Total:
+            </div>
+    
+            <div class="right" style="font-size: 25px; font-weight: bolder;">
+                
+                {{total_price}}
+                
+            
+            </div>
+            
+            <div class="center" style="font-size: 25px; font-weight: bolder;">
+                <button type="submit" class="btn-btn-primary">Submit Quote</button>
 
-
-<!--            <div>-->
-<!--                Suggested Price/gallon:-->
-<!--                <br>-->
-<!--                <br>-->
-<!--                Total Amount Due:-->
-<!--            </div>-->
+            </div>
         </div>
+
     </div>
 </form>
 {% endblock %}
+<Script:src></Script:src>
