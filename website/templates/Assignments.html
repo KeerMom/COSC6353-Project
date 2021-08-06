@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %}About Us{% endblock %} {% block
+content %}
+<form method="POST">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/Assignments.css') }}">
+{#<box12>#}
+{#    <h3 align="center">About Us</h3>#}
+{##}
+{#<box12>#}
+{#    This text is the content of the box.We have added a 50px padding, 20px margin.#}
+{#</box12>#}
+{#</box12>#}
+    <div>
+        <div Class = "textstyle">
+            Assignments
+        </div>
+
+        <div Class = "box12">
+           <p style = "font-size: 25px"> Assignment 1
+
+            <a href="{{ url_for('static', filename='Files/Assignment1_Groups_10.docx') }}" target="blank">Download</a>
+            </p>
+            <p style = "font-size: 25px"> Assignment 2
+
+            <a href="{{ url_for('static', filename='Files/Assignment2.docx') }}" target="blank">Download</a>
+            </p>
+            <p style = "font-size: 25px"> Assignment 3
+
+            <a href="{{ url_for('static', filename='Files/Assignment3.docx') }}" target="blank">Download</a>
+            </p>
+            <p style = "font-size: 25px"> Assignment 4
+
+            <a href="{{ url_for('static', filename='Files/Assignment4.docx') }}" target="blank">Download</a>
+            </p>
+
+
+
+
+        </div>
+{#        <div Class = "box12">#}
+{#           <p style = "font-size: 25px"> Project Discription:#}
+{#           </p>#}
+{#            <p style = "font-size: 12px">#}
+{#            This Project provides a WEB Application that calculates Fuel Prices for the given location and amount of fuel needed.#}
+{#            </p>#}
+{#            <p style = "font-size: 12px">#}
+{#                2. Tommy Nguyen#}
+{#            </p>#}
+{#            <p style = "font-size: 12px">#}
+{#                3. Xiaoqing Liu#}
+{#            </p>#}
+    </div>
+</form>
+{% endblock %}

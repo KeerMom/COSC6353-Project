@@ -1,0 +1,64 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/gas_station_picture.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-group{
+
+    width: 35%;
+    height: 90%;
+    position: relative;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.884);
+    border-radius: 2%;
+    transform: translate(0, -5%); 
+    /* overflow: hidden; */
+}
+
+
+
+.form-group input{
+    color: black;
+}
+.btn{
+    width: 65%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #f3c693;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    position: relative;
+    top: 10px;
+    
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 0;
+    margin: 15px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: black;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.form-control {
+
+    margin-right: auto;
+    margin-left: auto;
+    top: 120px;
+    width: 70%;
+    float: center;
+
+}

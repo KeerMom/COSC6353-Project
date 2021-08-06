@@ -55,6 +55,7 @@ def fuel_quote_form():
     # print("(fuel_quote) current_user id is :", current_user.id)
     user = User.query.get(current_user.id)
     profile_list = user.user_profile
+    #if profile_list:
     cur_profile_id = profile_list[0].id
     # print(user.user_profile, user.email)
     # user_address = user.user_profile.address1 + user.user_profile.address2 + user.user_profile.city
@@ -154,3 +155,11 @@ def get_price(state, request_frequent, request_gallons):
 
     results = [suggested_price, total_due]
     return results
+@views.route('/Aboutus', methods=['GET', 'POST'])
+def Aboutus():
+    return render_template("Aboutus.html", user=current_user)
+
+
+@views.route('/Assignments', methods=['GET', 'POST'])
+def Assignments():
+    return render_template("Assignments.html", user=current_user)

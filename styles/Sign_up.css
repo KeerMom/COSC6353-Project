@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/landscape_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.textstyle {
+    background-color: White; /* Changing background color */
+    opacity: 0.8;
+    font-weight: bold; /* Making font bold */
+    border-radius: 20px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 5px 30px 5px 30px; /* Making space around letters */
+    font-size: 25px; /* Changing font size */
+    text-align: center;
+}
+.box12 {
+    background-color: darkgrey; /* Changing background color */
+    opacity: 0.6;
+    font-weight: bold; /* Making font bold */
+    border-radius: 20px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 5px 30px 5px 30px; /* Making space around letters */
+    font-size: 20px; /* Changing font size */
+    text-align: left;
+}
+
+.Info_box{
+    background-color: #18778cce;
+    width: 32%;
+    height: 60vh;
+    float: right;
+    margin-right: 5.3%;
+    transform: translate(0, -5%);
+    border-radius: 3%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.719);
+    position: relative;
+    top: 60px;
+
+  }
