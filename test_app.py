@@ -201,6 +201,14 @@ class MyTestCase(unittest.TestCase):
         results = views.get_price(state, request_frequent, request_gallons)
         self.assertEqual(results[0], true_value)
 
+    def test_Aboutus(self):
+        response = requests.get('http://127.0.0.1:5000/Aboutus')
+        self.assertEqual(response.status_code, 200)
+
+    def test_Assignments(self):
+        response = requests.get('http://127.0.0.1:5000/Assignments')
+        self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
     unittest.main()
