@@ -1,8 +1,11 @@
 {% extends "base.html" %} {% block title %}Fuel Quote History{% endblock %} {% block
 content %}
-<form method="POST">
-    <h3 align="center">Fuel Quote History</h3>
+
+<div class = "history_box">
+  <form method="POST">
     <link rel="stylesheet" type="text/css" href="../static/styles/quote_history.css">
+    <h3 style="font-family: Montserrat; font-size: 25px; font-weight: bolder; text-align: left;color:White">Fuel Quote History</h3>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/quote.css') }}">
 <!--   <div class="history_box">-->
 <!--        <div class="history">-->
 <!--&lt;!&ndash;            <div class="history_title">&ndash;&gt;-->
@@ -10,7 +13,7 @@ content %}
 <!--&lt;!&ndash;            </div>&ndash;&gt;-->
 <!--            <hr >-->
             <table class="content-table">
-                <thead>
+                <div class="index">
                   <tr style="font-weight: bolder;">
                     <th>Delivery Date</th>
                     <th>Delivery Address</th>
@@ -18,7 +21,7 @@ content %}
                     <th>Price</th>
                     <th>Total Due</th>
                   </tr>
-                </thead>
+                </div>
                 <tbody>
                   {% for order in history_list %}
                     <tr>
@@ -36,5 +39,7 @@ content %}
 <!--        </div>-->
 <!--    </div>-->
 
-</form>
+  </form>
+</div>
 {% endblock %}
+
